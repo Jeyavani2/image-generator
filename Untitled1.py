@@ -12,7 +12,7 @@ from io import BytesIO
 st.title('image generator')
 pr=st.text_input("Enter prompt")
 if pr is not None and st.button("generate"):
-    client=genai.Client(api_key='AIzaSyDdDYoT8dGRfNpXRUAHrQMHHXUPOu-Hhpk')
+    client=genai.Client(api_key='your api key')
     response=client.models.generate_images(
         model='imagen-3.0-generate-002',
         prompt=pr,
