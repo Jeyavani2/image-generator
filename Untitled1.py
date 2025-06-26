@@ -10,10 +10,9 @@ from google.genai import types
 from PIL import Image
 from io import BytesIO
 st.title('image generator')
-pr=st.text_input("enter pr")
+pr=st.text_input("Enter prompt")
 if pr is not None and st.button("generate"):
     client=genai.Client(api_key='AIzaSyDdDYoT8dGRfNpXRUAHrQMHHXUPOu-Hhpk')
-    st.write('not ok')
     response=client.models.generate_images(
         model='imagen-3.0-generate-002',
         prompt=pr,
