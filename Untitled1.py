@@ -11,6 +11,7 @@ from PIL import Image
 from io import BytesIO
 st.title('image generator')
 pr=st.text_input("Enter prompt")
+st.write('pk')
 if pr is not None and st.button("generate"):
     client=genai.Client(api_key='AIzaSyDdDYoT8dGRfNpXRUAHrQMHHXUPOu-Hhpk')
     response=client.models.generate_images(
