@@ -20,5 +20,7 @@ if pr is not None and st.button("generate"):
         config=types.GenerateImagesConfig(number_of_images=4
                                          )
     )
-
+    for generated_image in response.generated_images:
+        image=Image.open(BytesIO(generated_image.image.image_bytes))
+        st.image(image)
 
